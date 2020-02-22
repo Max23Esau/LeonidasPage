@@ -325,6 +325,7 @@ body
         font-size: 2.3em;
         z-index: 20;
         margin: 0;
+        text-align: left;
         background: hsla(0, 0%, 2%, 0.7);
     }
     .hero__title strong{
@@ -332,9 +333,6 @@ body
     }
     .project-title, .project-course, .project-details, .project-date, .project-url{
         margin: .3em 0;
-    }
-    .container{
-        padding: 0 .5em;
     }
 }
 @media screen and (max-width: 767px)
@@ -416,7 +414,9 @@ body
 {
     .hero__title{
         font-size: 1.5em;
-        text-align: left;
+    }
+    .hero__img{
+        height: auto;
     }
     .project-details{
         font-size: 14px;
@@ -441,16 +441,18 @@ body
         border: 1px solid transparent;
     }
 }
+@media screen and (max-width: 375px){
+    .hero__title{
+        font-size: 1.2em;
+    }
+}
+
 @media screen and (max-width: 320px)
 {
     .hero__title{
-        font-size: 1.2em;
-        /* text-align: justify; */
+        font-size: 1em;
     }
     .hero{
         padding: 2.5em .5em;
-    }
-    .hero__img{
-        height: auto;
     }
 }
