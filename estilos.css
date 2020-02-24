@@ -469,6 +469,7 @@ body
         width: 100vw;
         height: 100vh;
         bottom: 0;
+        display: none;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -558,20 +559,14 @@ body
     }
 }
 @media screen and (max-width: 375px){
-    /* .burger-button{
-        z-index: 40;
-    } */
 
     .hero__title{
         font-size: 1.2em;
     }
 }
 
-@media screen and (max-width: 320px)
-{
-    /* .hero__title{
-        font-size: 1em;
-    } */
+@media screen and (max-width: 320px){
+
     .hero{
         padding: 2.5em .5em;
     }
