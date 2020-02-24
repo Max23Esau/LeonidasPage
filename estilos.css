@@ -153,7 +153,7 @@ body
 .project-description
 {
     margin-top: 10px;
-    font-size: 1.2;
+    font-size: 1.2em;
 }
 
 .project-imageContainer
@@ -341,6 +341,7 @@ body
     justify-content: space-between;
     flex-wrap: wrap;
     height: 70px;
+    padding: 0 1em;
 }
 .footer p
 {
@@ -372,7 +373,15 @@ body
 }
 .burger-button{
     width: 40px;
-    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000000;
+    display: none;
+    z-index: 30;
+    position: fixed;
+    /* width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.9);
     color: #000000;
@@ -383,6 +392,7 @@ body
     top: 5px;
     left: 5px;
     position: fixed;
+     */
 }
 @media screen and (max-width: 1024px)
 {   
@@ -418,7 +428,10 @@ body
 @media screen and (max-width: 767px)
 {   
     .burger-button{
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 40;
     }
     .header
     {
@@ -545,12 +558,9 @@ body
     }
 }
 @media screen and (max-width: 375px){
-    .burger-button{
-    display: block;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    }
+    /* .burger-button{
+        z-index: 40;
+    } */
 
     .hero__title{
         font-size: 1.2em;
@@ -559,9 +569,9 @@ body
 
 @media screen and (max-width: 320px)
 {
-    .hero__title{
+    /* .hero__title{
         font-size: 1em;
-    }
+    } */
     .hero{
         padding: 2.5em .5em;
     }
