@@ -469,7 +469,6 @@ body
         width: 100vw;
         height: 100vh;
         bottom: 0;
-        display: none;
         display: flex;
         align-items: center;
         justify-content: center;
