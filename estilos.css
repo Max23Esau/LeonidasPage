@@ -372,15 +372,8 @@ body
     flex-wrap: inherit;
 }
 .burger-button{
+
     width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #000000;
-    display: none;
-    z-index: 30;
-    position: fixed;
-    /* width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.9);
@@ -388,11 +381,10 @@ body
     display: none;
     line-height: 40px;
     text-align: center;
-    z-index: 30;
+    z-index: 40;
     top: 5px;
     left: 5px;
     position: fixed;
-     */
 }
 @media screen and (max-width: 1024px)
 {   
@@ -428,11 +420,9 @@ body
 @media screen and (max-width: 767px)
 {   
     .burger-button{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 40;
+        display: block;
     }
+
     .header
     {
         display: block;
