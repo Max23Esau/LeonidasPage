@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('./fonts/icomoon.eot?v43n9o');
+    src:  url('./fonts/icomoon.eot?v43n9o#iefix') format('embedded-opentype'),
+      url('./fonts/icomoon.ttf?v43n9o') format('truetype'),
+      url('./fonts/icomoon.woff?v43n9o') format('woff'),
+      url('./fonts/icomoon.svg?v43n9o#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+
+
 body
 {
     background-color:#DDDBCB;        
@@ -121,7 +153,7 @@ body
 .project-description
 {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 1.2;
 }
 
 .project-imageContainer
@@ -132,7 +164,22 @@ body
 .project-imageContainer img{
     max-width: 100%;
 }
-
+.youtube-video{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.flexible-video{
+    width: 100%;
+    height: 0;
+    padding-top: 56.26016260162602%;
+    background: #1D2027;
+    position: relative;
+}
 .event-list
 {
     display: flex;
@@ -149,6 +196,7 @@ body
     width: 48%;
     flex-shrink: 0;
     border-radius: 20px;
+    font-size: 1.1em;
     overflow: hidden;
     background: linear-gradient( #000000,#DDDBCB);
 }
@@ -163,6 +211,15 @@ body
     height: 200px;
     object-fit: cover;
 }
+.event-detail-video{
+    margin: 0;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    background: #1D2027;
+}
 .event-detail
 {
     margin: 20px 40px;
@@ -174,9 +231,18 @@ body
     font-weight: lighter;
     background: #1D2027;
 }
+.event-title-video{
+    margin: 0;
+    font-weight: 100;
+
+}
 .event-title
 {   
     font-weight: 100;
+}
+.event-descripion-video{
+    margin: 10px 0 20px 0;
+    text-align: left;
 }
 .event-descripion
 {
@@ -205,6 +271,7 @@ body
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 1em;
 }
 
 .form-email h3
@@ -303,7 +370,20 @@ body
     justify-content: inherit;
     flex-wrap: inherit;
 }
-
+.burger-button{
+    width: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000000;
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    z-index: 30;
+    top: 5px;
+    left: 5px;
+    position: fixed;
+}
 @media screen and (max-width: 1024px)
 {   
     .hero{
@@ -336,7 +416,10 @@ body
     }
 }
 @media screen and (max-width: 767px)
-{
+{   
+    .burger-button{
+        display: block;
+    }
     .header
     {
         display: block;
@@ -351,7 +434,7 @@ body
     }
     .header ol li
     {
-        height: 50px;
+        height: 100px;
     }
     .logo
     {
@@ -362,10 +445,28 @@ body
     {
         margin: 0;
         padding: 16px;
+        font-size: 1.8em;
+    }
+    .menu{
+        position: fixed;
+        background: rgba(5, 5, 5, .8);
+        z-index: 30;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }
+    .menu.is-active{
+        left: 0;
     }
     .menu__link
     {
-        padding: 10px;
+        font-size: 2em;
     }
     .hero__title{
         font-size: 2em;
@@ -397,11 +498,12 @@ body
         font-size: 1em;
     }
     .project-description{
-        font-size: .8em;
+        font-size: 1.1em;
     }
     .event{
         width: auto;
         flex-shrink: initial;
+        font-size: 1em;
     }
     .event-image{
         width: 100%;
@@ -443,6 +545,13 @@ body
     }
 }
 @media screen and (max-width: 375px){
+    .burger-button{
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    }
+
     .hero__title{
         font-size: 1.2em;
     }
